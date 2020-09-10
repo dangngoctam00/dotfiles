@@ -1,8 +1,12 @@
+" fzf
+noremap ` :Files<CR>
+noremap ; :Buffers<CR>
+
 " bind \ (backward slash) to grep shortcut
 nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <C-k> /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
-
+nnoremap <C-p> :Files<CR>
 " Easymotion
 " s{char}{char} to move to {char}{char} over windows
 nmap <Leader>F <Plug>(easymotion-overwin-f)
