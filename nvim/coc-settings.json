@@ -1,0 +1,33 @@
+{
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                },
+		 "gcc": {
+                	"resourceDir": "/usr/include",
+			"extraArgs": [
+				"-I",
+				"/usr/include"
+			]
+            	}
+            }
+    	}
+    },
+    "java.format.settings.url": "/home/scotlandyard/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+}
