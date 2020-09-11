@@ -105,7 +105,8 @@ export JAVA_HOME=/usr/lib/jvm/jdk
 export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export MAVEN_HOME=/opt/maven
 export PATH=$PATH:$MAVEN_HOME/bin
-export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%} %{$fg_bold[yellow]%}%D{%T}%{$reset_color%} [$(whoami)] %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}' 
+#%{$fg_bold[yellow]%}%D{%T}%{$reset_color%}
+export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}' 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'

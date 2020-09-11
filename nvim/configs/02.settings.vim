@@ -46,6 +46,9 @@ set expandtab
 "highlight search result
 set hlsearch
 
+if has('mouse')
+  set mouse=a
+endif
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
