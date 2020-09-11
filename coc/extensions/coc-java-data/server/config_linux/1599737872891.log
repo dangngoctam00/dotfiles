@@ -1,0 +1,394 @@
+!SESSION 2020-09-10 18:37:52.776 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=13.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/scotlandyard/dotfiles/coc/extensions/coc-java-data/jdt_ws_2e92ec9130243e2df991fbdb21ea188b
+
+!ENTRY org.eclipse.osgi 4 0 2020-09-10 18:37:53.106
+!MESSAGE Error installing bundle: reference:file:plugins/com.google.guava_27.1.0.v20190517-1946.jar
+!STACK 0
+org.osgi.framework.BundleException: Error occurred installing a bundle.
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:760)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.installBundle(BundleContextImpl.java:182)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.installBundles(EclipseStarter.java:984)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.loadBasicBundles(EclipseStarter.java:596)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.util.zip.ZipException: Exception in opening zip file: /home/scotlandyard/dotfiles/coc/extensions/coc-java-data/server/plugins/com.google.guava_27.1.0.v20190517-1946.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:349)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:411)
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:724)
+	... 13 more
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1470)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1371)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1378)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1209)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1172)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:719)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:239)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:169)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:183)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:335)
+	... 17 more
+Root exception:
+java.util.zip.ZipException: Exception in opening zip file: /home/scotlandyard/dotfiles/coc/extensions/coc-java-data/server/plugins/com.google.guava_27.1.0.v20190517-1946.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:349)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:411)
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:724)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.installBundle(BundleContextImpl.java:182)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.installBundles(EclipseStarter.java:984)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.loadBasicBundles(EclipseStarter.java:596)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1470)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1371)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1378)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1209)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1172)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:719)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:239)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:169)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:183)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:335)
+	... 17 more
+
+!ENTRY org.eclipse.osgi 4 0 2020-09-10 18:37:53.110
+!MESSAGE Error installing bundle: reference:file:plugins/com.ibm.icu_67.1.0.v20200706-1749.jar
+!STACK 0
+org.osgi.framework.BundleException: Error occurred installing a bundle.
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:760)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.installBundle(BundleContextImpl.java:182)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.installBundles(EclipseStarter.java:984)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.loadBasicBundles(EclipseStarter.java:596)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.util.zip.ZipException: Exception in opening zip file: /home/scotlandyard/dotfiles/coc/extensions/coc-java-data/server/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:349)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:411)
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:724)
+	... 13 more
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1470)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1371)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1378)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1209)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1172)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:719)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:239)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:169)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:183)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:335)
+	... 17 more
+Root exception:
+java.util.zip.ZipException: Exception in opening zip file: /home/scotlandyard/dotfiles/coc/extensions/coc-java-data/server/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:349)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:48)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:411)
+	at org.eclipse.osgi.storage.Storage.install(Storage.java:724)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.installBundle(BundleContextImpl.java:182)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.installBundles(EclipseStarter.java:984)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.loadBasicBundles(EclipseStarter.java:596)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:251)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1470)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1371)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1378)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1209)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1172)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:719)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:239)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:169)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:183)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:335)
+	... 17 more
+
+!ENTRY org.eclipse.buildship.core 4 0 2020-09-10 18:37:53.195
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.buildship.core [12]
+  Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.0.0,28.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.m2e.core 4 0 2020-09-10 18:37:53.444
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.m2e.core [53]
+  Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.m2e.jdt 4 0 2020-09-10 18:37:53.446
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.m2e.jdt [54]
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.jboss.tools.maven.apt.core 4 0 2020-09-10 18:37:53.448
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.jboss.tools.maven.apt.core [68]
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.jdt; bundle-version="1.5.0"
+    -> Bundle-SymbolicName: org.eclipse.m2e.jdt; bundle-version="1.16.0.20200610-1500"; singleton:="true"
+       org.eclipse.m2e.jdt [54]
+         Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+           -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+              org.eclipse.m2e.core [53]
+                Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="1.5.0"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2020-09-10 18:37:53.463
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.ls.core [48]
+  Unresolved requirement: Require-Bundle: org.eclipse.buildship.core; bundle-version="1.0.18"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.buildship.core; bundle-version="3.1.5.v20200806-2157-s"; singleton:="true"
+       org.eclipse.buildship.core [12]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.0.0,28.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib
+    -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtext.xbase.lib [65]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib
+    -> Bundle-SymbolicName: org.eclipse.xtend.lib; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtend.lib [63]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib.macro; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtend.lib.macro; bundle-version="2.23.0.v20200824-1048"
+              org.eclipse.xtend.lib.macro [64]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.jdt; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.m2e.jdt; bundle-version="1.16.0.20200610-1500"; singleton:="true"
+       org.eclipse.m2e.jdt [54]
+         Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+           -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j
+    -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+       org.eclipse.lsp4j [49]
+         Unresolved requirement: Import-Package: com.google.common.base; version="[14.0.0,28.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.osgi 4 0 2020-09-10 18:37:53.464
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.jdt.ls.core_0.61.0.202009090949.jar was not resolved.
+
+!ENTRY org.eclipse.lsp4j 2 0 2020-09-10 18:37:53.479
+!MESSAGE Could not resolve module: org.eclipse.lsp4j [49]
+  Unresolved requirement: Import-Package: com.google.common.base; version="[14.0.0,28.0.0)"
+
+
+!ENTRY org.eclipse.jdt.ls.core 2 0 2020-09-10 18:37:53.480
+!MESSAGE Could not resolve module: org.eclipse.jdt.ls.core [48]
+  Unresolved requirement: Require-Bundle: org.eclipse.buildship.core; bundle-version="1.0.18"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.buildship.core; bundle-version="3.1.5.v20200806-2157-s"; singleton:="true"
+       org.eclipse.buildship.core [12]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.0.0,28.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib
+    -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtext.xbase.lib [65]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib
+    -> Bundle-SymbolicName: org.eclipse.xtend.lib; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtend.lib [63]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib.macro; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtend.lib.macro; bundle-version="2.23.0.v20200824-1048"
+              org.eclipse.xtend.lib.macro [64]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.jdt; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.m2e.jdt; bundle-version="1.16.0.20200610-1500"; singleton:="true"
+       org.eclipse.m2e.jdt [54]
+         Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+           -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j
+    -> Bundle-SymbolicName: org.eclipse.lsp4j; bundle-version="0.9.0.v20200229-1009"
+       org.eclipse.lsp4j [49]
+         Unresolved requirement: Import-Package: com.google.common.base; version="[14.0.0,28.0.0)"
+
+
+!ENTRY org.eclipse.m2e.jdt 2 0 2020-09-10 18:37:53.481
+!MESSAGE Could not resolve module: org.eclipse.m2e.jdt [54]
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+
+!ENTRY org.eclipse.m2e.lifecyclemapping.defaults 2 0 2020-09-10 18:37:53.481
+!MESSAGE Could not resolve module: org.eclipse.m2e.lifecyclemapping.defaults [55]
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="[1.16.0,1.17.0)"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+
+!ENTRY org.eclipse.buildship.core 2 0 2020-09-10 18:37:53.482
+!MESSAGE Could not resolve module: org.eclipse.buildship.core [12]
+  Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.0.0,28.0.0)"
+
+
+!ENTRY org.eclipse.xtext.xbase.lib 2 0 2020-09-10 18:37:53.482
+!MESSAGE Could not resolve module: org.eclipse.xtext.xbase.lib [65]
+  Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"; visibility:="reexport"
+
+
+!ENTRY org.eclipse.xtend.lib 2 0 2020-09-10 18:37:53.482
+!MESSAGE Could not resolve module: org.eclipse.xtend.lib [63]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.lib.macro; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.xtend.lib.macro; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtend.lib.macro [64]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+              org.eclipse.xtext.xbase.lib [65]
+                Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0"; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+
+
+!ENTRY org.eclipse.m2e.core 2 0 2020-09-10 18:37:53.483
+!MESSAGE Could not resolve module: org.eclipse.m2e.core [53]
+  Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+
+!ENTRY org.eclipse.xtend.lib.macro 2 0 2020-09-10 18:37:53.483
+!MESSAGE Could not resolve module: org.eclipse.xtend.lib.macro [64]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase.lib; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.xtext.xbase.lib; bundle-version="2.23.0.v20200824-1048"
+       org.eclipse.xtext.xbase.lib [65]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"; visibility:="reexport"
+
+
+!ENTRY org.jboss.tools.maven.apt.core 2 0 2020-09-10 18:37:53.483
+!MESSAGE Could not resolve module: org.jboss.tools.maven.apt.core [68]
+  Unresolved requirement: Require-Bundle: org.eclipse.m2e.core; bundle-version="1.5.0"
+    -> Bundle-SymbolicName: org.eclipse.m2e.core; bundle-version="1.16.0.20200605-0817"; singleton:="true"
+       org.eclipse.m2e.core [53]
+         Unresolved requirement: Require-Bundle: com.google.guava; bundle-version="[27.1.0,28.0.0)"
+
+
+!ENTRY org.eclipse.osgi 4 0 2020-09-10 18:37:53.484
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: Application "org.eclipse.jdt.ls.core.id1" could not be found in the registry. The applications available are: org.eclipse.ant.core.antRunner, org.eclipse.equinox.app.error, org.eclipse.jdt.apt.core.aptBuild, org.eclipse.jdt.core.JavaIndexer.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:252)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:33)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
