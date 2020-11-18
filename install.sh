@@ -12,7 +12,7 @@
 #!/bin/bash
 echo "Starting install"
 # Utils
-function is_installed {
+is_installed() {
   # set to 1 initially
   local return_=1
   # set to 0 if not found
@@ -21,7 +21,7 @@ function is_installed {
   echo "$return_"
 }
 
-function install_macos {
+install_macos() {
  # if [[ $OSTYPE != darwin* ]]; then
  #  return
  # fi
@@ -65,18 +65,18 @@ function install_macos {
     sudo apt install neovim
   fi
 
-  #install font
-  cd ~/Downloads
-  wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
-  if [ ! -d "~/.fonts" ] ; then
-      mkdir ~/.fonts
-  fi
-  unzip 1.050R-it.zip 
-  cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
-  rm -rf source-code-pro* 
-  rm 1.050R-it.zip 
-  cd ~/
-  fc-cache -f -v
+  ##install font
+  #cd ~/Downloads
+  #wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+  #if [ ! -d "~/.fonts" ] ; then
+      #mkdir ~/.fonts
+  #fi
+  #unzip 1.050R-it.zip 
+  #cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+  #rm -rf source-code-pro* 
+  #rm 1.050R-it.zip 
+  #cd ~/
+  #fc-cache -f -v
 }
 
 #function backup {
@@ -93,11 +93,11 @@ function install_macos {
   # mv ~/.vimrc.bundles ~/$backup_dir/.vimrc.bundles
 #}
 
-function link_dotfiles {
+link_dotfiles() {
   echo "Linking dotfiles"
-
-  ln -s $(pwd)/zshrc ~/.zshrc
-  ln -s $(pwd)/tmux.conf ~/.tmux.conf
+cd ~
+  ln -s ~/dotfiles/zshrc .zshrc
+  ln -s ~/dotfiles/tmux.conf .tmux.conf
   
   echo "Installing oh-my-zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -110,6 +110,13 @@ function link_dotfiles {
 
 
   curl -fLo $(pwd)/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+  git clone https://github.com/dracula/zsh.git
+   cd ~/.oh-my-zsh/themes/
+  ln -s ~/zsh/dracula.zsh-theme dracula.zsh-theme
+  cd ~
  # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
  # rm -rf $HOME/.config/nvim/init.vim
