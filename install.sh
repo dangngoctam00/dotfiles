@@ -65,6 +65,8 @@ install_macos() {
     sudo apt install neovim
   fi
 
+  sudo apt install ccls
+
   ##install font
   #cd ~/Downloads
   #wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
