@@ -77,6 +77,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 alias vim="nvim"
+alias python="python3.8"
+alias pip="pip3"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -106,8 +108,13 @@ export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export MAVEN_HOME=/opt/maven
 export PATH=$PATH:$MAVEN_HOME/bin
 #%{$fg_bold[yellow]%}%D{%T}%{$reset_color%}
-export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[blue]%}%c %{$reset_color%}' 
+export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[yellow]%}%c %{$reset_color%}' 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export XDG_CONFIG_HOME=~/dotfiles
+export CLASSPATH=".:~/201/ppl/antlr-4.8-complete.jar:$CLASSPATH"
+alias antlr4='java -jar ~/201/ppl/antlr-4.8-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
+export ANTLR_JAR="~/201/ppl/antlr-4.8-complete.jar"
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

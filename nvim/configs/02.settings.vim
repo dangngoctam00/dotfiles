@@ -50,8 +50,8 @@ if has('mouse')
   set mouse=a
 endif
 " Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+"set textwidth=80
+"set colorcolumn=+1
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -68,6 +68,11 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 nnoremap <Leader>\ :vsplit<CR>
 nnoremap <Leader>/ :split<CR>
+
+nnoremap <C-Right> <C-W>l
+nnoremap <C-Left> <C-W>h
+nnoremap <C-Down> <C-W>j
+nnoremap <C-Up> <C-W>k
 
 " Remove highlight
 map <C-h> :nohl<CR>

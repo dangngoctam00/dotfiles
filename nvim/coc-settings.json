@@ -23,7 +23,11 @@
                 	"resourceDir": "/usr/include",
 			"extraArgs": [
 				"-I",
-				"/usr/include"
+				"/usr/include",
+            "-I",
+            "/usr/local/include",
+            "-I",
+            "/usr/include/c++/9"
 			]
             	}
             }
