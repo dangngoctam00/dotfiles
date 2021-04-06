@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "coc-java": ">=1.4.12",
+    "coc-python": ">=1.2.13",
     "coc-sh": ">=0.5.1",
     "coc-tsserver": ">=1.5.5"
   }

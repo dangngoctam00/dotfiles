@@ -107,14 +107,16 @@ export JAVA_HOME=/usr/lib/jvm/jdk
 export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export MAVEN_HOME=/opt/maven
 export PATH=$PATH:$MAVEN_HOME/bin
+export CATALINA_HOME=/opt/tomcat
 #%{$fg_bold[yellow]%}%D{%T}%{$reset_color%}
-export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[yellow]%}%c %{$reset_color%}' 
+export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[yellow]%}%c $(git_prompt_info)% %{$reset_color%}' 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export XDG_CONFIG_HOME=~/dotfiles
-export CLASSPATH=".:~/201/ppl/antlr-4.8-complete.jar:$CLASSPATH"
-alias antlr4='java -jar ~/201/ppl/antlr-4.8-complete.jar'
+export CLASSPATH=".:~/201/ppl/antlr-4.9-complete.jar:$CLASSPATH"
+alias antlr4='java -jar ~/201/ppl/antlr-4.9-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
-export ANTLR_JAR="~/201/ppl/antlr-4.8-complete.jar"
+export ANTLR_JAR="~/201/ppl/antlr-4.9-complete.jar"
+export PATH=$PATH:/usr/lib/x86_64-linux-gnu/openmpi/include
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

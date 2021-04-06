@@ -27,11 +27,14 @@
             "-I",
             "/usr/local/include",
             "-I",
-            "/usr/include/c++/9"
+            "/usr/include/c++/9",
+            "-I",
+            "/usr/lib/x86_64-linux-gnu/openmpi/include"
 			]
             	}
             }
     	}
     },
-    "java.format.settings.url": "/home/scotlandyard/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+    "java.format.settings.url": "/home/scotlandyard/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+ "python.jediEnabled": false
 }

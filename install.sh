@@ -97,9 +97,8 @@ install_macos() {
 
 link_dotfiles() {
   echo "Linking dotfiles"
-cd ~
-  ln -s ~/dotfiles/zshrc .zshrc
-  ln -s ~/dotfiles/tmux.conf .tmux.conf
+  ln -s ~/dotfiles/zshrc ~/.zshrc
+  ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
   
   echo "Installing oh-my-zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -110,14 +109,13 @@ cd ~
     git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
   fi
 
-
+  cd ~
   curl -fLo $(pwd)/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
   git clone https://github.com/dracula/zsh.git
-   cd ~/.oh-my-zsh/themes/
-  ln -s ~/zsh/dracula.zsh-theme dracula.zsh-theme
+  ln -s ~/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
   cd ~
  # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
