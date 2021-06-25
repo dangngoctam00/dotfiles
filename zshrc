@@ -1,3 +1,5 @@
+# applications desktop: /usr/share/applications/
+#
 #run this command to create file .zshrc in /home folder:
          #ln -s ~/dotfiles/.zshrc ~/.zshrc
 # If you come from bash you might have to change your $PATH.
@@ -7,7 +9,7 @@
 export ZSH="/home/scotlandyard/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
+# one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="dracula"
 
@@ -120,3 +122,25 @@ alias grun='java org.antlr.v4.gui.TestRig'
 export ANTLR_JAR="~/201/ppl/antlr-4.9-complete.jar"
 export PATH=$PATH:/usr/lib/x86_64-linux-gnu/openmpi/include
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH=$PATH:/opt/kafka/bin
+
+function compile_cc() {
+   g++ $1 -o "`basename $1 .cpp`"
+   ./`basename $1 .cpp`
+}
+
+function compile_c() {
+   gcc $1 -o "`basename $1 .c`"
+}
+
+function cr() {
+   mkdir $1
+   cd $1
+}
+
+function java_run() {
+   javac $1
+   java `basename $1 .java`
+   rm *.class 
+}
