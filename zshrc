@@ -5,12 +5,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/home/scotlandyard/.oh-my-zsh"
+# Path to your oh-my-zsh installation.  export ZSH="/home/$(whoami)/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+export ZSH="/home/$(whoami)/.oh-my-zsh"
 ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
@@ -72,7 +72,7 @@ ZSH_THEME="dracula"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -116,12 +116,7 @@ export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(who
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export XDG_CONFIG_HOME=~/dotfiles
-export CLASSPATH=".:~/201/ppl/antlr-4.9-complete.jar:$CLASSPATH"
-alias antlr4='java -jar ~/201/ppl/antlr-4.9-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
-export ANTLR_JAR="~/201/ppl/antlr-4.9-complete.jar"
 export PATH=$PATH:/usr/lib/x86_64-linux-gnu/openmpi/include
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:/opt/kafka/bin
 

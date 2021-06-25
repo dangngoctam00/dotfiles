@@ -2,7 +2,6 @@
 #ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 
-
 #auto-load neovim
 #curl -fLo ~/dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -21,102 +20,65 @@ is_installed() {
   echo "$return_"
 }
 
-install_macos() {
- # if [[ $OSTYPE != darwin* ]]; then
- #  return
- # fi
- # echo "MacOS detected"
- # xcode-select --install
-
-  if [ "$(is_installed git)" == "0" ]; then
-    echo "Installing Git"
-    sudo apt install git-all
+install_manjaro() {
+ echo "flag"
+  if [ "$(is_installed git)" == "0" ]; then echo "Installing Git" sudo pacman -Syu git-all
   fi
 
   if [ "$(is_installed zsh)" == "0" ]; then
     echo "Installing zsh"
-    sudo apt-get install zsh
+    sudo pacman -Syu zsh
   fi
 
   if [ "$(is_installed ag)" == "0" ]; then
     echo "Installing The silver searcher"
-    sudo  apt-get install silversearcher-ag
+    sudo  pacman -Syu the_silver_searcher
   fi
 
   if [ "$(is_installed fzf)" == "0" ]; then
     echo "Installing fzf"
-    sudo apt-get install fzf
+    sudo pacman -Syu fzf
   fi
 
   if [ "$(is_installed tmux)" == "0" ]; then
     echo "Installing tmux"
-    sudo apt install tmux
+    sudo pacman -Syu tmux
   fi
 
 
   if [ "$(is_installed node)" == "0" ]; then
     echo "Installing Node"
-    sudo apt-get install nodejs
-    sudo apt install npm
+    sudo pacman -Syu nodejs
+    sudo pacman -Syu npm
   fi
   echo "install nvim"
   if [ "$(is_installed nvim)" == "0" ]; then
     echo "Install neovim"
-    sudo apt install neovim
+    sudo pacman -Syu neovim
   fi
 
-  sudo apt install ccls
-
-  ##install font
-  #cd ~/Downloads
-  #wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
-  #if [ ! -d "~/.fonts" ] ; then
-      #mkdir ~/.fonts
-  #fi
-  #unzip 1.050R-it.zip 
-  #cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
-  #rm -rf source-code-pro* 
-  #rm 1.050R-it.zip 
-  #cd ~/
-  #fc-cache -f -v
+  sudo pacman -S ccls
 }
 
-#function backup {
-  # echo "Backing up dotfiles"
-  # local current_date=$(date +%s)
-  # local backup_dir=dotfiles_$current_date
-  #
-  #  mkdir ~/$backup_dir
-  #
-  #  mv ~/.zshrc ~/$backup_dir/.zshrc
-  #  mv ~/.tmux.conf ~/$backup_dir/.tmux.conf
-  # mv ~/.vim ~/$backup_dir/.vim
-  # mv ~/.vimrc ~/$backup_dir/.vimrc
-  # mv ~/.vimrc.bundles ~/$backup_dir/.vimrc.bundles
-#}
 
 link_dotfiles() {
+cd ~
+  echo "Installing oh-my-zsh"
+  #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  echo "Installing zsh-autosuggestions"
+  git clone git://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  curl -fLo ~/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
   echo "Linking dotfiles"
+  rm ~/.zshrc
   ln -s ~/dotfiles/zshrc ~/.zshrc
   ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-  
-  echo "Installing oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-
-  if [ ! -d "$ZSH/custom/plugins/zsh-autosuggestions" ]; then
-    echo "Installing zsh-autosuggestions"
-    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
-  fi
-
-  cd ~
-  curl -fLo $(pwd)/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
   git clone https://github.com/dracula/zsh.git
   ln -s ~/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
-  cd ~
+  chsh -s $(which zsh)
  # sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
  # rm -rf $HOME/.config/nvim/init.vim
@@ -132,8 +94,8 @@ while test $# -gt 0; do
       echo "Help"
       exit
       ;;
-    --macos)
-      install_macos
+    --manjaro)
+      install_manjaro
      # backup
       link_dotfiles
       zsh
@@ -152,3 +114,4 @@ while test $# -gt 0; do
 
   shift
 done
+
