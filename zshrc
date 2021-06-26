@@ -11,7 +11,7 @@
 # one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 export ZSH="/home/$(whoami)/.oh-my-zsh"
-ZSH_THEME="dracula"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,8 +79,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 alias vim="nvim"
-alias python="python3.8"
-alias pip="pip3"
+#alias python="python3.9"
+#alias pip="pip3"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -105,13 +105,13 @@ alias pip="pip3"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 SPACESHIP_CHAR_SYMBOL="${SPACESHIP_CHAR_SYMBOL="➜ "}"
-export JAVA_HOME=/usr/lib/jvm/jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export MAVEN_HOME=/opt/maven
 export PATH=$PATH:$MAVEN_HOME/bin
 export CATALINA_HOME=/opt/tomcat
 #%{$fg_bold[yellow]%}%D{%T}%{$reset_color%}
-export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[yellow]%}%c $(git_prompt_info)% %{$reset_color%}' 
+#export PROMPT='%{$fg_bold[green]%}${SPACESHIP_CHAR_SYMBOL}%{$reset_color%}[$(whoami)] %{$fg_bold[yellow]%}%c $(git_prompt_info)% %{$reset_color%}' 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
