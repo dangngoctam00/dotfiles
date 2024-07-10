@@ -107,4 +107,8 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 plugins=(git)
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source /opt/homebrew/opt/fzf/shell/key-bindings.zshsource /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
