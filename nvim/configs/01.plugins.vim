@@ -16,7 +16,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dominikduda/vim_current_word'
 Plug 'jiangxincode/mpi.vim'
 call plug#end()

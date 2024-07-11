@@ -11,3 +11,5 @@ bindings = [
   { key = "Left",  mods = "Alt", chars = "\u001BB" },
 ]
 
+[window]
+padding = { x = 15, y = 15 }
